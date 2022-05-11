@@ -248,8 +248,39 @@ body {
 .navigation__item {
   text-align: center;
 
+  &--line {
+    margin-top: 4rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 100%;
+      max-width: 150px;
+      height: 2.5px;
+      @include gradient();
+      border-radius: 25px;
+      position: absolute;
+      top: -2rem;
+      left: 50%;
+      margin-left: -75px;
+    }
+  }
+
   @media screen and (min-width: $largeWidth) {
     margin-left: 1.5rem;
+
+    &--line {
+      margin-top: 0;
+      margin-left: 4rem;
+
+      &::before {
+        width: 2.5px;
+        height: 100%;
+        top: 0;
+        left: -2rem;
+        margin-left: 0;
+      }
+    }
   }
 }
 
