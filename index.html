@@ -31,22 +31,146 @@
           <div class="navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
-                <a href="#" class="navigation__link">O mnie</a>
+                <a href="#about-me" class="navigation__link">O mnie</a>
               </li>
               <li class="navigation__item">
-                <a href="#" class="navigation__link">Projekty</a>
+                <a href="#projects" class="navigation__link">Projekty</a>
               </li>
               <li class="navigation__item">
-                <a href="#" class="navigation__link">Kontakt</a>
+                <a href="#contact" class="navigation__link">Kontakt</a>
               </li>
               <li class="navigation__item navigation__item--line">
-                <a href="#" class="navigation__link" target="_blank" title="otwiera się w nowej karcie">Blog</a>
+                <a href="https://usigna.github.io/blog/" class="navigation__link" target="_blank" title="otwiera się w nowej karcie">Blog</a>
               </li>
             </ul>
           </div>
         </nav>
       </div>
     </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero__wrapper wrapper">
+          <h2 class="title title--hero" lang="en">Hello, World!</h2>
+          <p class="text text--hero" lang="en">
+            Web Accessibility &#8226; Economy &#8226; Front-End
+          </p>
+        </div>
+      </section>
+      <section class="section" id="about-me">
+        <div class="section__wrapper section__wrapper--two-cols wrapper">
+          <div class="container container--left">
+            <h2 class="title">O mnie</h2>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, laudantium sit? Tempore hic omnis at voluptate esse veritatis saepe cum.</p>
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, laudantium?</p>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora incidunt aspernatur unde saepe porro sint veniam doloribus iusto, dicta nisi voluptatem blanditiis nam magni deserunt eaque ab commodi! Nihil, ducimus.</p>
+            <div class="social-media">
+              <h3 class="sr-only">Linki do mediów społecznościowych</h3>
+              <div class="social-media__item">
+                <a href="https://github.com/usigna" target="_blank" title="otwiera się w nowej karcie" class="social-media__link">
+                  <span class="fa-brands fa-github-alt" aria-hidden="true"></span>
+                  <span class="sr-only">GitHub</span>
+                </a>
+              </div>
+              <div class="social-media__item">
+                <a href="https://www.instagram.com/uwaga.kodowanko/" target="_blank" title="otwiera się w nowej karcie" class="social-media__link">
+                  <span class="fa-brands fa-instagram" aria-hidden="true"></span>
+                  <span class="sr-only">Instagram</span>
+                </a>
+              </div>
+              <div class="social-media__item">
+                <a href="https://twitter.com/usigna__" target="_blank" title="otwiera się w nowej karcie" class="social-media__link">
+                  <span class="fa-brands fa-twitter" aria-hidden="true"></span>
+                  <span class="sr-only">Twitter</span>
+                </a>
+              </div>
+              <div class="social-media__item">
+                <a href="https://discord.gg/4rjJrukNh4" target="_blank" title="otwiera się w nowej karcie" class="social-media__link">
+                  <span class="fa-brands fa-discord" aria-hidden="true"></span>
+                  <span class="sr-only">Discord A11Y</span>
+                </a>
+              </div>
+              <div class="social-media__item">
+                <a href="https://codepen.io/usigna" target="_blank" title="otwiera się w nowej karcie" class="social-media__link">
+                  <span class="fa-brands fa-codepen" aria-hidden="true"></span>
+                  <span class="sr-only">CodePen</span>
+                </a>
+              </div>
+              <div class="social-media__item">
+                <a href="https://www.youtube.com/channel/UCiNOx3bdCuh86v1gTBKd9OQ" target="_blank" title="otwiera się w nowej karcie" class="social-media__link">
+                  <span class="fa-brands fa-youtube" aria-hidden="true"></span>
+                  <span class="sr-only">YouTube</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="container container--right container--hidden-right">
+            <div class="technologies">
+              <h3 class="sr-only">Technologie</h3>
+                <div class="technology">
+                  <span class="fa-brands fa-html5" aria-hidden="true"></span>
+                  <span class="sr-only">HTML 5</span>
+                </div>
+                <div class="technology">
+                  <span class="fa-brands fa-css3-alt" aria-hidden="true"></span>
+                  <span class="sr-only">CSS 3</span>
+                </div>
+                <div class="technology">
+                  <span class="fa-brands fa-js" aria-hidden="true"></span>
+                  <span class="sr-only">JavaScript</span>
+                </div>
+                <div class="technology">
+                  <span class="fa-brands fa-wordpress" aria-hidden="true"></span>
+                  <span class="sr-only">WordPress</span>
+                </div>
+                <div class="technology">
+                  <span class="fa-brands fa-vuejs" aria-hidden="true"></span>
+                  <span class="sr-only">Vue.js</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="projects">
+        <div class="section__wrapper wrapper">
+          <h2 class="title">Projekty</h2>
+
+        </div> 
+      </section>
+      <section class="section" id="contact">
+        <div class="section__wrapper section__wrapper--two-cols wrapper">
+          <div class="container container--left">
+            <h2 class="title">Kontakt</h2>
+            <div class="email">
+              <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, assumenda!</p>
+              <span class="fa-solid fa-envelope email__icon" aria-hidden="true"></span> <a href="mailto:sylwia.fait@gmail.com" class="email__link">sylwia.fait@gmail.com</a>
+            </div>
+            <form class="form">
+              <h3 class="form__title">Formularz kontaktowy</h3>
+              <div class="form__item">
+                <label for="name" class="form__label">Imię (wymagane)</label>
+                <input type="text" required id="name" class="form__input" placeholder="Gerwazy" />
+              </div>
+              <div class="form__item">
+                <label for="email" class="form__label">E-mail (wymagane)</label>
+                <input type="email" required id="email" class="form__input" placeholder="gerwazy@poczta.pl" />
+              </div>
+              <div class="form__item">
+                <label for="message" class="form__label">Wiadomość (wymagane)</label>
+                <textarea type="email" required id="message" class="form__input form__input--textarea" placeholder="Dzień dobry..."></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Wyślij wiadomość</button>
+            </form>
+          </div>
+          <div class="container container--right container--hidden-right">
+            <div class="blob">
+              <img src="../img/blob-animation.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer class="footer">
       <div class="footer__wrapper wrapper">
