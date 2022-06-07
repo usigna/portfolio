@@ -19,7 +19,7 @@ body {
   position: relative;
   scroll-behavior: smooth;
   font-size: 62.25%;
-  background: $blackColor;
+  background: $whiteColor;
 }
 
 body {
@@ -33,7 +33,6 @@ body {
   margin: 0 auto;
   font-size: 1.6rem;
   font-weight: 400;
-  color: $whiteColor;
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
 }
@@ -89,7 +88,9 @@ body {
 .header {
   width: 100%;
   padding: 2.5rem 0;
-  position: absolute
+  position: absolute;
+  color: $whiteColor;
+  background: $blackColor;
 }
 
 .header__wrapper {
@@ -202,7 +203,7 @@ body {
   height: auto;
   width: 100%;
   padding: 5rem 0;
-  background: $secondBlackColor;
+  background: $blackColor;
   @include flex(column, center, center);
   position: absolute;
   top: 0;
@@ -250,39 +251,8 @@ body {
 .navigation__item {
   text-align: center;
 
-  &--line {
-    margin-top: 4rem;
-    position: relative;
-
-    &::before {
-      content: "";
-      width: 100%;
-      max-width: 150px;
-      height: 2.5px;
-      @include gradient();
-      border-radius: 25px;
-      position: absolute;
-      top: -2rem;
-      left: 50%;
-      margin-left: -75px;
-    }
-  }
-
   @media screen and (min-width: $largeWidth) {
     margin-left: 1.5rem;
-
-    &--line {
-      margin-top: 0;
-      margin-left: 4rem;
-
-      &::before {
-        width: 2.5px;
-        height: 100%;
-        top: 0;
-        left: -2rem;
-        margin-left: 0;
-      }
-    }
   }
 }
 
@@ -334,6 +304,8 @@ body {
 /* hero */
 .hero {
   height: 100vh;
+  color: $whiteColor;
+  background: $blackColor;
 }
 
 .hero__wrapper {
@@ -346,25 +318,34 @@ body {
   display: inline-block;
   font-size: 4rem;
   text-transform: uppercase;
-  @include gradient();
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   margin-bottom: 5rem;
 
-  &--hero {
+  &--gradient {
     font-size: 7rem;
     margin-bottom: 2.5rem;
+    @include gradient();
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
 .text {
   margin-top: 0;
   padding-top: 0;
+
+  &--big {
+    font-size: 2rem;
+  }
 }
 
 /* section */
 .section {
   padding: 4rem 0;
+
+  &--dark {
+    color: $whiteColor;
+    background: $blackColor;
+  }
 }
 
 .section__wrapper {
@@ -415,7 +396,7 @@ body {
 }
 
 .social-media__link {
-  color: $whiteColor;
+  color: $blackColor;
   font-size: 2rem;
   text-decoration: none;
   opacity: 0.9;
@@ -423,7 +404,7 @@ body {
 
   &:hover,
   &:focus {
-    color: $blueColor;
+    color: $darkBlueColor;
     opacity: 1;
   }
 }
@@ -441,23 +422,23 @@ body {
   font-size: 7.5rem;
 
   &:first-of-type {
-    color: #e56027;
+    color: #cc421e;
   }
 
   &:nth-of-type(2) {
-    color: #27a0d4;
+    color: #016bad;
   }
 
   &:nth-of-type(3) {
-    color: #f2cd37;
+    color: #d2af0e;
   }
 
   &:nth-of-type(5) {
-    color: #3eaf7c;
+    color: #2f845d;
   }
 }
 
-/* contact */
+/* email */
 .email {
   margin-bottom: 4rem;
 }
@@ -496,10 +477,12 @@ body {
 .form__input {
   width: 90%;
   padding: 0.5rem;
+  background: $whiteColor;
+  border: none;
 
-  &:focus {
-    background: #f0f0f0;
-  }
+  // &:focus {
+  //   background: #f0f0f0;
+  // }
 
   &--textarea {
     height: 100px;
@@ -519,7 +502,7 @@ body {
 
 .submit-btn {
   color: $whiteColor;
-  background: $secondBlackColor;
+  background: $blackColor;
   padding: 0.6rem 1rem;
   border: none;
   position: relative;
@@ -541,7 +524,7 @@ body {
     content: "";
     width: 99%;
     height: 95%;
-    background-color: $secondBlackColor;
+    background-color: $blackColor;
     position: absolute;
     top: 2.5%;
     left: 0.5%;
@@ -568,6 +551,8 @@ body {
 
 /* footer */ 
 .footer {
+  color: $whiteColor;
+  background: $blackColor;
   padding: 2.5rem 0;
 }
 
