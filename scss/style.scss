@@ -98,3 +98,218 @@ body {
   @include gradient();
   border-radius: 5px;  
 }
+
+/* header */
+.header {
+  width: 100%;
+  padding: 2.5rem 0;
+  position: absolute;
+}
+
+.header__wrapper {
+  @include flex(row, flex-end, space-between);
+}
+
+.logo a {
+  display: inline-block;
+  font-weight: 600;
+  color: $whiteColor;
+  font-size: 2.5rem;
+  margin: 0;
+  position: relative;
+  z-index: 6;
+  text-decoration: none;
+
+  &::before {
+    content: "";
+    width: 100px;
+    height: 5px;
+    @include gradient();
+    border-radius: 25px;
+    position: absolute;
+    left: 3.5px;
+    bottom: 3.5px;
+    z-index: -1;
+  }
+}
+
+/* hamburger */
+.hamburger {
+  width: 50px;
+  height: 45px;
+  display: inline-block;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 5px;
+  z-index: 6;
+  position: absolute;
+  top: 2.5rem;
+  right: 5%;
+  cursor: pointer;
+  transition: transform .3s .1s ease-in-out, visibility 0s .4s;
+  display: block;
+
+  @media screen and (min-width: $largeWidth) {
+    display: none;
+  }
+}
+
+.hamburger__box {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger__inner {
+  width: 100%;
+  height: 3px;
+  background-color: $whiteColor;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.1s 0.2s ease-in-out;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: $whiteColor;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    transition: transform 0.2s 0.2s ease-in-out;
+  }
+
+  &::before {
+    top: -10px;
+  }
+
+  &::after {
+    top: 10px;
+  }
+}
+
+.hamburger--active {
+  background-color: transparent;
+
+  .hamburger__inner {
+    background-color: transparent;
+
+    &::before {
+      transform: translateY(10px) rotate(45deg);
+    }
+
+    &::after {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }
+}
+
+/* navigation */
+.navigation {
+  height: auto;
+  width: 100%;
+  padding: 5rem 0;
+  background: $blackColor;
+  @include flex(column, center, center);
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  z-index: 5;
+  transition: transform .3s .1s ease-in-out, visibility 0s .4s;
+
+  @media screen and (min-width: $largeWidth) {
+    height: auto;
+    padding: 0;
+    background: transparent;
+    visibility: visible;
+    transform: translateY(0);
+    z-index: 0;
+    position: static;
+  }
+}
+
+.navigation--active {
+  transform: translateY(0px);
+  transition: transform .3s .1s ease-in-out, visibility 0s 0s;
+  visibility: visible;
+}
+
+.navigation__list {
+  width: 100%;
+  max-width: 700px;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 5.5rem 0;
+  line-height: 2;
+  text-align: center;
+  z-index: 5;
+
+  @media screen and (min-width: $largeWidth) {
+    margin: 0;
+    padding: 0;
+    @include flex(row, flex-end, space-between);
+  }
+}
+
+.navigation__item {
+  text-align: center;
+
+  @media screen and (min-width: $largeWidth) {
+    margin-left: 2.5rem;
+  }
+}
+
+.navigation__link {
+  display: block;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: $whiteColor;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  position: relative;
+  transition: background 0.2s ;
+
+  @media screen and (max-width: $largeWidth) {
+    &:hover,
+    &:focus {
+      @include gradient();
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  @media screen and (min-width: $largeWidth) {
+    padding: 0 1rem;
+    margin-bottom: 0;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 5px;
+      @include gradient();
+      border-radius: 25px;
+      position: absolute;
+      left: 0;
+      bottom: 3.5px;
+      transform: scale(0);
+      transition: transform 0.2s;
+      z-index: -1;
+    }
+  
+    &:hover::before,
+    &:focus::before {
+      transform: scale(1);
+    }
+  }
+}
