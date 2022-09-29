@@ -127,7 +127,8 @@ body {
     @include gradient();
     border-radius: 25px;
     position: absolute;
-    left: 3.5px;
+    // left: 3.5px;
+    left: 2px;
     bottom: 3.5px;
     z-index: -1;
   }
@@ -166,7 +167,7 @@ body {
 .hamburger__inner {
   width: 100%;
   height: 3px;
-  background-color: $whiteColor;
+  @include gradient();
   border-radius: 25px;
   position: absolute;
   left: 0;
@@ -177,12 +178,12 @@ body {
   &::before,
   &::after {
     content: "";
-    width: 100%;
+    width: 85%;
     height: 3px;
     background-color: $whiteColor;
     border-radius: 25px;
     position: absolute;
-    left: 0;
+    right: 0;
     transition: transform 0.2s 0.2s ease-in-out;
   }
 
@@ -199,7 +200,7 @@ body {
   background-color: transparent;
 
   .hamburger__inner {
-    background-color: transparent;
+    background: transparent;
 
     &::before {
       transform: translateY(10px) rotate(45deg);
@@ -278,7 +279,8 @@ body {
   padding: 0.5rem 0;
   margin-bottom: 1rem;
   position: relative;
-  transition: background 0.2s ;
+  transition: background 0.2s;
+  display: inline-block;
 
   @media screen and (max-width: $largeWidth) {
     &:hover,
@@ -293,7 +295,7 @@ body {
     padding: 0 1rem;
     margin-bottom: 0;
 
-    &::before {
+    &::after {
       content: "";
       width: 100%;
       height: 5px;
@@ -307,8 +309,8 @@ body {
       z-index: -1;
     }
   
-    &:hover::before,
-    &:focus::before {
+    &:hover::after,
+    &:focus::after {
       transform: scale(1);
     }
   }
@@ -317,6 +319,51 @@ body {
 /* section */
 .section {
   padding: 2.5rem 0;
+
+  &--second-color {
+    background-color: $secondBlackColor;
+  }
+
+  &--third-color {
+    background-color: $whiteColor;
+
+    .wrapper {
+      color: $blackColor;
+    }
+  }
+
+  &--fourth-color {
+    background-color: $secondWhiteColor;
+    background-color: $secondBlackColor;
+  }
+
+  &--fifth-color {
+    background-color: $secondBlackColor;
+    background-color: $blackColor;
+  }
+}
+
+.wave {
+  width: 110%;
+  height: 140px;
+  overflow: hidden;
+  // background-color: yellow;
+
+  &--first {
+    background: url("../img/wave-1.svg") no-repeat bottom/cover;
+  }
+
+  &--second {
+    background: $secondBlackColor url("../img/wave-2.svg") no-repeat bottom/cover;
+  }
+
+  &--third {
+    background: $whiteColor url("../img/wave-3.svg") no-repeat bottom/cover;
+  }
+
+  &--fourth {
+    background: $secondBlackColor url("../img/wave-4.svg") no-repeat bottom/cover;
+  }
 }
 
 .hero {
@@ -325,6 +372,7 @@ body {
   @media screen and (min-width: $largeWidth) {
     height: 100vh;
     padding: 2.5rem 0;
+    @include flex(row, center, center);
   }
 }
 
@@ -363,11 +411,17 @@ body {
 
 .title {
   display: inline-block;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  margin: 0 0 3rem;
+
+  @media screen and (min-width: $largeWidth) {
+    font-size: 4rem;
+  }
 
   &--big {
     font-size: 4rem;
     margin: 0 0 3rem;
-    text-transform: uppercase;
 
     @media screen and (min-width: $largeWidth) {
       font-size: 5rem;
@@ -422,10 +476,13 @@ body {
   }
 }
 
-
 .blob {
   img {
     width: 100%;
   }
 }
 
+/* footer */
+.footer {
+  background-color: $blackColor;
+}
