@@ -316,6 +316,11 @@ body {
   }
 }
 
+/* main */
+.main {
+  overflow-x: hidden;
+}
+
 /* section */
 .section {
   padding: 2.5rem 0;
@@ -346,8 +351,6 @@ body {
 .wave {
   width: 110%;
   height: 140px;
-  overflow: hidden;
-  // background-color: yellow;
 
   &--first {
     background: url("../img/wave-1.svg") no-repeat bottom/cover;
@@ -482,7 +485,53 @@ body {
   }
 }
 
+/* social media */
+.social-media {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  @include flex(row, center, center);
+}
+
+.social-media__item {
+  margin-left: 1rem;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+}
+
+.social-media__link {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  transition: background 0.2s;
+
+  &:hover,
+  &:focus {
+    @include gradient();
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &--grey {
+    color: $greyColor;
+  }
+}
+
 /* footer */
 .footer {
   background-color: $blackColor;
+  padding: 2.5rem 0;
+}
+
+.footer__wrapper {
+  @include flex(column, center, center);
+
+  @media screen and (min-width: $mediumWidth) {
+    @include flex(row, center, space-between);
+  }
+}
+
+.copyright {
+  color: $greyColor;
 }
