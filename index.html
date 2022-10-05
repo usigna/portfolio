@@ -51,16 +51,18 @@
 
     <main class="main" id="main">
       <section class="section hero">
-        <div class="section__wrapper wrapper hero__wrapper">
-          <div class="container container--left">
-            <h2 class="title title--big" lang="en"><span class="title__color">Hello</span>, I'm Usigna</h2>
-            <div class="text margin-bottom">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint modi commodi adipisci, libero, iste suscipit error voluptas, assumenda doloremque at quibusdam quod sit atque corporis optio voluptatibus cupiditate alias mollitia iusto aliquid fugiat. Repellat aspernatur nam deserunt, provident obcaecati aperiam distinctio dicta, nihil quasi enim ratione illo consequatur odio! Aliquam!
+        <div class="section__wrapper wrapper">
+          <div class="container">
+            <div class="container__item container__item--w50 container__item--padding-right">
+              <h2 class="title title--big" lang="en"><span class="title__color">Hello</span>, I'm Usigna</h2>
+              <div class="text margin-bottom">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint modi commodi adipisci, libero, iste suscipit error voluptas, assumenda doloremque at quibusdam quod sit atque corporis optio voluptatibus cupiditate alias mollitia iusto aliquid fugiat. Repellat aspernatur nam deserunt, provident obcaecati aperiam distinctio dicta, nihil quasi enim ratione illo consequatur odio! Aliquam!
+              </div>
+              <a href="#contact" class="btn">Kontakt</a>
             </div>
-            <a href="#contact" class="btn">Kontakt</a>
-          </div>
-          <div class="container container--right">
-            <img src="img/blob-animation.svg" alt="" />
+            <div class="container__item container__item--w50 container__item--max-width container__item--hidden">
+              <img src="img/blob-animation.svg" alt="" />
+            </div>
           </div>
         </div>
       </section>
@@ -68,7 +70,39 @@
       <section class="section section--second-color" id="about-me">
         <div class="section__wrapper wrapper">
           <h2 class="title">O mnie</h2>
-          
+          <div class="container">
+            <div class="container__item container__item--w33">
+              <div class="image-wrapper">
+
+              </div>
+            </div>
+            <div class="container__item container__item--w67">
+              <p class="text margin-bottom">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum praesentium exercitationem eligendi beatae a ducimus neque ut cupiditate corporis aspernatur perspiciatis laudantium vel totam quis, reiciendis nostrum consequatur perferendis quae placeat temporibus molestiae ullam facilis assumenda officia. Eos temporibus nihil quo quis. Id, optio culpa necessitatibus molestiae omnis similique nobis, recusandae voluptatibus sunt cum sint aliquam quas iste accusamus repellendus ea delectus fuga. Molestiae asperiores assumenda eos libero rerum quibusdam a dolorum nihil saepe! Incidunt aperiam quae dolor ipsa ut placeat veritatis animi non, numquam nam aut amet, quam sunt eaque optio fugit quibusdam illo eveniet magnam dolorum debitis. Enim.</p>
+              <div class="social-media">
+                <h3 class="sr-only">Linki do mediów społecznościowych</h3>
+                <ul class="social-media__list">
+                  <li class="social-media__item">
+                    <a href="https://github.com/usigna" target="_blank" class="social-media__link social-media__link--grey">
+                      <span class="fa-brands fa-github-alt" aria-hidden="true"></span>
+                      <span class="sr-only">GitHub, otwiera się w nowej karcie.</span>
+                    </a>
+                  </li>
+                  <li class="social-media__item">
+                    <a href="https://www.instagram.com/uwaga.kodowanko/" target="_blank" class="social-media__link social-media__link--grey">
+                      <span class="fa-brands fa-instagram" aria-hidden="true"></span>
+                      <span class="sr-only">Instagram, otwiera się w nowej karcie.</span>
+                    </a>
+                  </li>
+                  <li class="social-media__item">
+                    <a href="https://twitter.com/usigna__" target="_blank" class="social-media__link social-media__link--grey">
+                      <span class="fa-brands fa-twitter" aria-hidden="true"></span>
+                      <span class="sr-only">Twitter, otwiera się w nowej karcie.</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <div class="wave wave--second"></div>
@@ -98,9 +132,9 @@
       <div class="footer__wrapper wrapper">
         <h2 class="sr-only">Stopka</h2>
         <p class="copyright">&copy; 2022 Usigna</p>
-        <div class="social-media">
+        <div class="social-media social-media--right">
           <h3 class="sr-only">Linki do mediów społecznościowych</h3>
-          <ul class="social-media">
+          <ul class="social-media__list">
             <li class="social-media__item">
               <a href="https://github.com/usigna" target="_blank" class="social-media__link social-media__link--grey">
                 <span class="fa-brands fa-github-alt" aria-hidden="true"></span>
