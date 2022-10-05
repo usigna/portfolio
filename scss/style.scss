@@ -395,31 +395,28 @@ body {
 .container__item {
   &--w67 {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 5rem;
 
     @media screen and (min-width: $largeWidth) {
       width: 67%;
-      margin-bottom: 0;
     }
   }
 
   &--w50 {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 5rem;
 
     @media screen and (min-width: $largeWidth) {
       width: 50%;
-      margin-bottom: 0;
     }
   }
 
   &--w33 {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 5rem;
 
     @media screen and (min-width: $largeWidth) {
       width: 33%;
-      margin-bottom: 0;
     }
   }
 
@@ -514,6 +511,36 @@ body {
   img {
     width: 100%;
   }
+}
+
+.project {
+  width: 100%;
+  line-height: 0;
+}
+
+.project__link {
+  display: block;
+  background-color: transparent;
+  padding: 0.3rem;
+  transition: background 0.2s;
+
+  &:hover,
+  &:focus {
+    @include gradient();
+  }
+}
+
+.project__image {
+  width: 100%;
+
+  @media screen and (min-width: $mediumWidth) {
+    width: 70%;
+  }
+
+  @media screen and (min-width: $largeWidth) {
+    width: 100%;
+  }
+
 }
 
 /* social media */
