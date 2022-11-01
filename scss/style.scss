@@ -374,21 +374,21 @@ body {
   }
 }
 
-.hero {
-  padding: 5rem 0;
+// .hero {
+//   padding: 5rem 0;
 
-  @media screen and (min-width: $largeWidth) {
-    height: 100vh;
-    padding: 2.5rem 0;
-  }
-}
+//   @media screen and (min-width: $largeWidth) {
+//     height: 100vh;
+//     padding: 2.5rem 0;
+//   }
+// }
 
 .container {
-  @include flex(column, flex-start, center);
+  @include flex(row, flex-start, center);
+  flex-wrap: wrap;
 
   @media screen and (min-width: $largeWidth) {
     @include flex(row, center, space-between);
-    flex-wrap: wrap;
   }
 }
 
@@ -412,7 +412,7 @@ body {
   }
 
   &--w33 {
-    width: 100%;
+    width: 50%;
     margin-bottom: 5rem;
 
     @media screen and (min-width: $largeWidth) {
@@ -458,6 +458,14 @@ body {
       font-size: 5rem;
     }
   }
+
+  &--small {
+    font-size: 1.6rem;
+
+    @media screen and (min-width: $largeWidth) {
+      font-size: 3.1rem;
+    }
+  }
 }
 
 .title__color {
@@ -476,6 +484,10 @@ body {
 
 .margin-bottom {
   margin-bottom: 5rem;
+
+  &--half {
+    margin-bottom: 2.5rem;
+  }
 }
 
 .btn {
@@ -520,13 +532,12 @@ body {
 
 .project__link {
   display: block;
-  background-color: transparent;
-  padding: 0.3rem;
+  padding: 0.5rem;
   transition: background 0.2s;
 
   &:hover,
   &:focus {
-    @include gradient();
+    background: url("../img/blob-project.png") no-repeat center/cover;
   }
 }
 
@@ -540,7 +551,6 @@ body {
   @media screen and (min-width: $largeWidth) {
     width: 100%;
   }
-
 }
 
 /* social media */
