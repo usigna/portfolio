@@ -375,15 +375,6 @@ body {
   }
 }
 
-// .hero {
-//   padding: 5rem 0;
-
-//   @media screen and (min-width: $largeWidth) {
-//     height: 100vh;
-//     padding: 2.5rem 0;
-//   }
-// }
-
 .container {
   @include flex(row, flex-start, center);
   flex-wrap: wrap;
@@ -531,6 +522,16 @@ body {
 .blob {
   img {
     width: 100%;
+  }
+}
+
+.image-wrapper {
+  img {
+    width: 70%;
+  }
+
+  @media screen and (min-width: $largeWidth) {
+    padding: 3rem;
   }
 }
 
