@@ -410,12 +410,12 @@ body {
 
     @media screen and (min-width: $largeWidth) {
       width: 67%;
+      margin-bottom: 0;
     }
   }
 
   &--w50 {
     width: 100%;
-    margin-bottom: 5rem;
 
     @media screen and (min-width: $largeWidth) {
       width: 50%;
@@ -428,6 +428,7 @@ body {
 
     @media screen and (min-width: $largeWidth) {
       width: 33%;
+      margin-bottom: 0;
     }
   }
 
