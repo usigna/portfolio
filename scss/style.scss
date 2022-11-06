@@ -493,7 +493,11 @@ body {
 
 .btn-wrapper {
   text-align: center;
-  margin: 5rem;
+  margin-top: 1.5rem;
+
+  @media screen and (min-width: $largeWidth) {
+    margin-top: 5rem;
+  }
 }
 
 .btn {
