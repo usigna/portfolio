@@ -390,15 +390,18 @@ body {
     .container__item {
       &--w33 {
         width: 100%;
+        margin-bottom: 2.5rem;
 
         @media screen and (min-width: $largeWidth) {
           width: 33%;
+          margin-bottom: 5rem;
         }
       }
     }
   
     @media screen and (min-width: $largeWidth) {
       @include flex(row, flex-start, space-between);
+      flex-wrap: wrap;
     }
   }
 }
@@ -604,7 +607,7 @@ body {
 }
 
 .blog-preview__container {
-  padding: 1.5rem 0.5rem;
+  padding: 1.5rem 1.5rem 1.5rem 0;
 }
 
 .blog-preview__date {
