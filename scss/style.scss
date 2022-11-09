@@ -498,15 +498,6 @@ body {
   margin-bottom: 5rem;
 }
 
-.btn-wrapper {
-  text-align: center;
-  margin-top: 1.5rem;
-
-  @media screen and (min-width: $largeWidth) {
-    margin-top: 5rem;
-  }
-}
-
 .btn {
   display: inline-block;
   color: $blackColor;
@@ -642,6 +633,46 @@ body {
     left: 0;
     bottom: -1.5px;
     z-index: 0;
+  }
+}
+
+.page-list {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  @include flex(row, center, center);
+}
+
+.page-list__item {
+
+}
+
+.page-list__link {
+  display: block;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  @include flex(row, center, center);
+  font-size: 1.8rem;
+  margin: 0 0.5rem;
+  font-weight: 600;
+  color: $whiteColor;
+  background-color: $secondBlackColor;
+  border: 1px solid $whiteColor;
+  transition: background 0.2s;
+
+  &--active {
+    @include gradient();
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &:hover,
+  &:focus {
+    @include gradient();
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
