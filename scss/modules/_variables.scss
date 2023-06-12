@@ -1,22 +1,13 @@
 // colors
-$whiteColor: rgb(255, 255, 255);
-$secondWhiteColor: rgb(240, 240, 240);
-$blackColor: rgb(0, 0, 0);
-// $secondBlackColor: rgb(5, 4, 4);
-$secondBlackColor: rgb(15, 15, 15);
-$lightBlueColor: rgb(60, 185, 252);
-$darkBlueColor: rgb(16, 56, 79);
-$lightGreenColor: rgb(2, 215, 150);
-$pinkColor: rgb(247, 11, 154);
-$darkPinkColor: rgb(210, 48, 146);
-$yellowColor: rgb(250, 201, 82);
-$orangeColor: rgb(248, 136, 105);
-$redColor: rgb(239, 81, 82);
-$greyColor: rgb(211, 211, 211);
+$whiteColor: #F2F2F2;
+$blackColor100: #050404;
+$blackColor95: #121111;
+$grayColor: #C0C0C0;
+$blueColor: #3CB9FC;
+$greenColor: #02D796;
+$darkBlueColor: #1E4F9F;
 
 // width
-$smallWidth: 576px;
-$mediumWidth: 768px;
-$largeWidth: 992px;
-$hdWidth: 1280px;
-$fullHdWidth: 1920px;
+$tabletWidth: 600px;
+$laptopWidth: 1200px;
+$tvWidth: 1800px;

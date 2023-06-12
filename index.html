@@ -5,268 +5,236 @@
     <meta charset="UTF-8">
     <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio">
+    <meta name="description" content="Portfolio - Usigna.">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/png" href="favicon.png"/>
     <title>Usigna</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/style.min.css">
   </head>
 
   <body>
     <a href="#main" class="skip-link wrapper">Przejdź do treści</a>
 
-    <h1 class="sr-only">Portfolio</h1>
-
     <header class="header">
-      <div class="header__wrapper wrapper">
-        <div class="logo">
-          <a href="#">Usigna<span class="sr-only"> - strona główna</span></a>
-        </div>
-        <nav class="nav">
+      <div class="header__wrapper wrapper wrapper--large">
+        <a href="#" class="logo">Usigna<span class="sr-only"> - strona główna</span></a>
+        <div class="menu">
           <button class="hamburger" aria-expanded="false">
             <span class="sr-only">Otwórz/zamknij menu</span>
             <span class="hamburger__box">
               <span class="hamburger__inner"></span>
             </span>
           </button>
-          <div class="navigation">
-            <ul class="navigation__list">
+          <nav class="nav">
+            <ul class="navigation">
               <li class="navigation__item">
-                <a href="#about-me" class="navigation__link">O mnie</a>
+                <a href="" class="navigation__link">Strona główna</a>
               </li>
               <li class="navigation__item">
-                <a href="#projects" class="navigation__link">Projekty</a>
+                <a href="" class="navigation__link">O mnie</a>
               </li>
               <li class="navigation__item">
-                <a href="#blog" class="navigation__link">Blog</a>
+                <a href="" class="navigation__link">Projekty</a>
               </li>
               <li class="navigation__item">
-                <a href="#contact" class="navigation__link">Kontakt</a>
+                <a href="" class="navigation__link">Audyty dostępności</a>
               </li>
+              <li class="navigation__item">
+                <a href="" class="navigation__link">Blog</a>
+              </li>
+              <li class="navigation__item">
+                <a href="" class="navigation__link">Kontakt</a>
+              </li>
+              <img src="img/shape.png" alt="" class="menu-decoration" />
             </ul>
-          </div>
-        </nav>
+          </nav>
+        </div>
       </div>
     </header>
 
     <main class="main" id="main">
-      <section class="section hero">
-        <div class="section__wrapper wrapper">
-          <div class="container">
-            <div class="container__item container__item--w50 container__item--padding-right">
-              <h2 class="title title--big" lang="en"><span class="title__color">Hello</span>, I'm Usigna</h2>
-              <div class="text margin-bottom">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint modi commodi adipisci, libero, iste suscipit error voluptas, assumenda doloremque at quibusdam quod sit atque corporis optio voluptatibus cupiditate alias mollitia iusto aliquid fugiat. Repellat aspernatur nam deserunt, provident obcaecati aperiam distinctio dicta, nihil quasi enim ratione illo consequatur odio! Aliquam!
-              </div>
-              <a href="#contact" class="btn">Kontakt</a>
-            </div>
-            <div class="container__item container__item--w50 container__item--max-width container__item--hidden">
-              <img src="img/blob-animation.svg" alt="" />
+      <section class="section section--hero">
+        <div class="section__wrapper section__wrapper--two-cols wrapper wrapper--small">
+          <div class="text-wrapper">
+            <h1 class="title title--main"><span class="gradient-text">Hello</span>, I’m Usigna</h1>
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Nunc sed augue lacus viverra vitae. A diam maecenas sed enim. Scelerisque purus semper eget duis at tellus at.</p>
+              <a href="#contact" class="btn btn--fill btn--decoration">Kontakt</a>
+          </div>
+          <div class="blob-wrapper">
+            <div class="blob">
+              <img src="img/blob-animate.svg" alt="Animowana kropla." class="blob-img" />
+              <button class="blob-btn" title="zatrzymaj/wznów animację">
+                <img src="img/pause-solid.svg" alt="Zatrzymaj animację." class="pause"/>
+              </button>
             </div>
           </div>
         </div>
       </section>
-      <div class="wave wave--first"></div>
-      <section class="section section--second-color" id="about-me">
-        <div class="section__wrapper wrapper">
-          <h2 class="title">O mnie</h2>
-          <div class="container">
-            <div class="container__item container__item--w33">
-              <div class="image-wrapper">
-                <img src="img/blob-aboutme.png" alt="" />
-              </div>
-            </div>
-            <div class="container__item container__item--w67">
-              <p class="text margin-bottom">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum praesentium exercitationem eligendi beatae a ducimus neque ut cupiditate corporis aspernatur perspiciatis laudantium vel totam quis, reiciendis nostrum consequatur perferendis quae placeat temporibus molestiae ullam facilis assumenda officia. Eos temporibus nihil quo quis. Id, optio culpa necessitatibus molestiae omnis similique nobis, recusandae voluptatibus sunt cum sint aliquam quas iste accusamus repellendus ea delectus fuga. Molestiae asperiores assumenda eos libero rerum quibusdam a dolorum nihil saepe! Incidunt aperiam quae dolor ipsa ut placeat veritatis animi non, numquam nam aut amet, quam sunt eaque optio fugit quibusdam illo eveniet magnam dolorum debitis. Enim.</p>
-              <div class="social-media">
-                <h3 class="sr-only">Linki do mediów społecznościowych</h3>
-                <ul class="social-media__list">
-                  <li class="social-media__item">
-                    <a href="https://github.com/usigna" target="_blank" class="social-media__link social-media__link--grey">
-                      <span class="fa-brands fa-github-alt" aria-hidden="true"></span>
-                      <span class="sr-only">GitHub, otwiera się w nowej karcie.</span>
-                    </a>
-                  </li>
-                  <li class="social-media__item">
-                    <a href="https://www.instagram.com/uwaga.kodowanko/" target="_blank" class="social-media__link social-media__link--grey">
-                      <span class="fa-brands fa-instagram" aria-hidden="true"></span>
-                      <span class="sr-only">Instagram, otwiera się w nowej karcie.</span>
-                    </a>
-                  </li>
-                  <li class="social-media__item">
-                    <a href="https://twitter.com/usigna__" target="_blank" class="social-media__link social-media__link--grey">
-                      <span class="fa-brands fa-twitter" aria-hidden="true"></span>
-                      <span class="sr-only">Twitter, otwiera się w nowej karcie.</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+      <div class="wave wave--down">
+        <img src="img/wave-top.svg" alt="" />
+      </div>
+      <section class="section section--white">
+        <div class="section__wrapper section__wrapper--two-cols wrapper wrapper--small">
+          <div class="blob-wrapper">
+            <img src="img/blob-about-me.png" alt="" class="blob-about-me" />
+          </div>
+          <div class="text-wrapper text-wrapper--black">
+            <h2 class="title title--black">O mnie</h2>
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Nunc sed augue lacus viverra vitae. A diam maecenas sed enim. Scelerisque purus semper eget duis at tellus at.</p>
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Nunc sed augue lacus viverra vitae. A diam maecenas sed enim. Scelerisque purus semper eget duis at tellus at.</p>
+            <div class="social-media">
+              <h3 class="sr-only">Media społecznościowe</h3>
+              <a href="" class="social-media__link">
+                <img src="img/github-icon.svg" alt="GitHub" />
+                <span class="sr-only"> otwiera się w nowej karcie.</span>
+              </a>
+              <a href="" class="social-media__link">
+                <img src="img/instagram-icon.svg" alt="Instagram" />
+                <span class="sr-only"> otwiera się w nowej karcie.</span>
+              </a>
+              <a href="" class="social-media__link">
+                <img src="img/twitter-icon.svg" alt="Twitter" />
+                <span class="sr-only"> otwiera się w nowej karcie.</span>
+              </a>
             </div>
           </div>
         </div>
       </section>
-      <div class="wave wave--second"></div>
-      <section class="section section--third-color" id="projects">
-        <div class="section__wrapper wrapper">
+      <div class="wave wave--up">
+        <img src="img/wave-middle-1.svg" alt="" />
+      </div>
+      <section class="section">
+        <div class="section__wrapper wrapper wrapper--small">
           <h2 class="title">Projekty</h2>
-          <div class="container">
-            <div class="container__item container__item--w33">
-              <div class="project-preview">
-                <a href="projects/example.html" class="project-preview__link">
-                  <img src="img/pigeons.png" alt="Strona Pigeons" class="project-preview__image" />
-                </a>
+          <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Nunc sed augue lacus viverra vitae. A diam maecenas sed enim. Scelerisque purus semper eget duis at tellus at.</p>
+          <div class="projects">
+            <div class="project">
+              <div class="image-wrapper image-wrapper--small"></div>
+              <div class="text-wrapper">
+                <h3 class="title title--small">Strona internetowa</h3>
+                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                  Nunc sed augue lacus viverra vitae. A diam maecenas sed enim. Scelerisque purus semper eget duis at tellus at.</p>
+                <a href="#" class="btn btn--fill">Zobacz case study</a>
               </div>
             </div>
-            <div class="container__item container__item--w33">
-              <div class="project-preview">
-                <a href="projects/example.html" class="project-preview__link">
-                  <img src="img/pigeons.png" alt="Strona Pigeons" class="project-preview__image" />
-                </a>
+            <div class="project project--column-reverse">
+              <div class="text-wrapper">
+                <h3 class="title title--small">Animacja</h3>
+                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                  Nunc sed augue lacus viverra vitae. A diam maecenas sed enim. Scelerisque purus semper eget duis at tellus at.</p>
+                <a href="#" class="btn btn--fill">Zobacz case study</a>
               </div>
+              <div class="image-wrapper image-wrapper--small"></div>
             </div>
-            <div class="container__item container__item--w33">
-              <div class="project-preview">
-                <a href="projects/example.html" class="project-preview__link">
-                  <img src="img/pigeons.png" alt="Strona Pigeons" class="project-preview__image" />
-                </a>
-              </div>
-            </div>
-            <div class="container__item container__item--w33">
-              <div class="project-preview">
-                <a href="projects/example.html" class="project-preview__link">
-                  <img src="img/pigeons.png" alt="Strona Pigeons" class="project-preview__image" />
-                </a>
-              </div>
-            </div>
-            <div class="container__item container__item--w33">
-              <div class="project-preview">
-                <a href="projects/example.html" class="project-preview__link">
-                  <img src="img/pigeons.png" alt="Strona Pigeons" class="project-preview__image" />
-                </a>
-              </div>
-            </div>
-            <div class="container__item container__item--w33">
-              <div class="project-preview">
-                <a href="projects/example.html" class="project-preview__link">
-                  <img src="img/pigeons.png" alt="Strona Pigeons" class="project-preview__image" />
-                </a>
+            <div class="project">
+              <div class="image-wrapper image-wrapper--small"></div>
+              <div class="text-wrapper">
+                <h3 class="title title--small">Gra</h3>
+                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                  Nunc sed augue lacus viverra vitae. A diam maecenas sed enim. Scelerisque purus semper eget duis at tellus at.</p>
+                <a href="#" class="btn btn--fill">Zobacz case study</a>
               </div>
             </div>
           </div>
+          <div class="button-wrapper">
+            <a href="#" class="btn btn--border btn--center">Zobacz więcej projektów</a>
+          </div>
         </div>
       </section>
-      <div class="wave wave--third"></div>
-      <section class="section section--fourth-color" id="blog">
-        <div class="section__wrapper wrapper">
+      <div class="wave wave--down">
+        <img src="img/wave-middle-2.svg" alt="" />
+      </div>
+      <section class="section section--white">
+        <div class="section__wrapper wrapper wrapper--small">
+          <h2 class="title title--black">Audyty dostępności cyfrowej</h2>
+          <p class="text text--black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Nunc sed augue lacus viverra vitae. A diam maecenas sed enim. Scelerisque purus semper eget duis at tellus at.</p>
+          <div class="projects">
+            <div class="project">
+              <div class="image-wrapper image-wrapper--small"></div>
+              <div class="text-wrapper">
+                <h3 class="title title--small">Audyt</h3>
+                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                  Nunc sed augue lacus viverra vitae. A diam maecenas sed enim. Scelerisque purus semper eget duis at tellus at.</p>
+                <a href="#" class="btn btn--fill">Zobacz case study</a>
+              </div>
+            </div>
+            <div class="project project--column-reverse">
+              <div class="text-wrapper">
+                <h3 class="title title--small">Audyt</h3>
+                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                  Nunc sed augue lacus viverra vitae. A diam maecenas sed enim. Scelerisque purus semper eget duis at tellus at.</p>
+                <a href="#" class="btn btn--fill">Zobacz case study</a>
+              </div>
+              <div class="image-wrapper image-wrapper--small"></div>
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <a href="#" class="btn btn--border btn--border-black btn--center">Zobacz więcej audytów</a>
+          </div>
+        </div>
+      </section>
+      <div class="wave wave--up">
+        <img src="img/wave-bottom.svg" alt="" />
+      </div>
+      <section class="section">
+        <div class="section__wrapper wrapper wrapper--small">
           <h2 class="title">Blog</h2>
-          <div class="container container--column">
-            <div class="container__item container__item--w33">
-              <div class="blog-preview">
-                <a href="blog/example.html" class="blog-preview__link">
-                  <img src="img/pigeons-blog.png" alt="Gołębie" class="blog-preview__image" />
-                  <div class="blog-preview__container">
-                    <div class="blog-preview__info">
-                      <span class="blog-preview__date">02.11.2022</span>
-                      <span class="blog-preview__tag">Kodowanie</span>
-                    </div>
-                    <h3 class="blog-preview__title">Lorem, ipsum dolor.</h3>
-                    <p class="blog-preview__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sunt quas iusto tempora aliquid in molestias autem. Earum, ratione molestiae.</p>
-                    <div class="blog-preview__btn">Czytaj więcej<span class="sr-only"> o Lorem, ipsum dolor.</span></div>
-                  </div>
-                </a>
-              </div>
+          <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Nunc sed augue lacus viverra vitae. A diam maecenas sed enim. Scelerisque purus semper eget duis at tellus at.</p>
+          <div class="items">
+            <div class="item">
+              <div class="image-wrapper image-wrapper--large"></div>
+              <h3 class="title title--small">Lorem lorem ipsum</h3>
+              <div class="date">25.05.2023 | Web Accessibility</div>
+              <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <a href="" class="btn btn--fill">Czytaj więcej</a>
             </div>
-            <div class="container__item container__item--w33">
-              <div class="blog-preview">
-                <a href="blog/example.html" class="blog-preview__link">
-                  <img src="img/pigeons-blog.png" alt="Gołębie" class="blog-preview__image" />
-                  <div class="blog-preview__container">
-                    <div class="blog-preview__info">
-                      <span class="blog-preview__date">02.11.2022</span>
-                      <span class="blog-preview__tag">Kodowanie</span>
-                    </div>
-                    <h3 class="blog-preview__title">Lorem, ipsum dolor.</h3>
-                    <p class="blog-preview__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sed obcaecati autem eos aliquam consequuntur velit nobis enim corrupti, atque quas. Neque rem in natus incidunt quaerat earum veniam, autem tempora ab numquam qui sit provident quibusdam distinctio fugiat quae soluta. Atque in, necessitatibus quibusdam consectetur fugit mollitia pariatur dolore.</p>
-                    <div class="blog-preview__btn">Czytaj więcej<span class="sr-only"> o Lorem, ipsum dolor.</span></div>
-                  </div>
-                </a>
-              </div>
+            <div class="item">
+              <div class="image-wrapper image-wrapper--large"></div>
+              <h3 class="title title--small">Lorem lorem ipsum</h3>
+              <div class="date">25.05.2023 | Web Accessibility</div>
+              <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <a href="" class="btn btn--fill">Czytaj więcej</a>
             </div>
-            <div class="container__item container__item--w33">
-              <div class="blog-preview">
-                <a href="blog/example.html" class="blog-preview__link">
-                  <img src="img/pigeons-blog.png" alt="Gołębie" class="blog-preview__image" />
-                  <div class="blog-preview__container">
-                    <div class="blog-preview__info">
-                      <span class="blog-preview__date">02.11.2022</span>
-                      <span class="blog-preview__tag">Kodowanie</span>
-                    </div>
-                    <h3 class="blog-preview__title">Lorem, ipsum dolor.</h3>
-                    <p class="blog-preview__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sunt quas iusto tempora aliquid in molestias autem. Earum, ratione molestiae.</p>
-                    <div class="blog-preview__btn">Czytaj więcej<span class="sr-only"> o Lorem, ipsum dolor.</span></div>
-                  </div>
-                </a>
-              </div>
+            <div class="item">
+              <div class="image-wrapper image-wrapper--large"></div>
+              <h3 class="title title--small">Lorem lorem ipsum</h3>
+              <div class="date">25.05.2023 | Web Accessibility</div>
+              <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <a href="" class="btn btn--fill">Czytaj więcej</a>
             </div>
           </div>
-          <div>
-            <h3 class="sr-only">Wybór innych postów (nowe pokażą się w miejscu obecnych)</h3>
-            <ul class="page-list">
-              <li class="page-list__item">
-                <a href="#" class="page-list__link page-list__link--active">1</a>
-              </li>
-              <li class="page-list__item">
-                <a href="#" class="page-list__link">2</a>
-              </li>
-            </ul> 
+          <div class="button-wrapper">
+            <a href="#" class="btn btn--border btn--center">Zobacz więcej postów</a>
           </div>
         </div>
       </section>
-      <div class="wave wave--fourth"></div>
-      <section class="section section--fifth-color" id="contact">
-        <div class="section__wrapper wrapper">
+      <section class="section">
+        <div class="section__wrapper wrapper wrapper--small">
           <h2 class="title">Kontakt</h2>
+          <p class="text text--small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Nunc sed augue lacus viverra vitae. A diam maecenas sed enim. Scelerisque purus semper eget duis at tellus at.</p>
           <div class="email">
-            <p class="text email__text">
-              <span class="sr-only">Adres email: </span>
-              <span class="fa-solid fa-at email__icon" aria-hidden="true"></span> <a href="mailto:usignak@gmail.com" class="email__link">usignak@gmail.com</a>
-            </p>
+            <span class="gradient-text email__icon">@</span><a href="mailto:usignak@gmail.com" class="email__link">usignak@gmail.com</a>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="footer__wrapper wrapper">
-        <h2 class="sr-only">Stopka</h2>
-        <p class="copyright">&copy; 2022 Usigna</p>
-        <div class="social-media social-media--right">
-          <h3 class="sr-only">Linki do mediów społecznościowych</h3>
-          <ul class="social-media__list">
-            <li class="social-media__item">
-              <a href="https://github.com/usigna" target="_blank" class="social-media__link social-media__link--grey">
-                <span class="fa-brands fa-github-alt" aria-hidden="true"></span>
-                <span class="sr-only">GitHub, otwiera się w nowej karcie.</span>
-              </a>
-            </li>
-            <li class="social-media__item">
-              <a href="https://www.instagram.com/uwaga.kodowanko/" target="_blank" class="social-media__link social-media__link--grey">
-                <span class="fa-brands fa-instagram" aria-hidden="true"></span>
-                <span class="sr-only">Instagram, otwiera się w nowej karcie.</span>
-              </a>
-            </li>
-            <li class="social-media__item">
-              <a href="https://twitter.com/usigna__" target="_blank" class="social-media__link social-media__link--grey">
-                <span class="fa-brands fa-twitter" aria-hidden="true"></span>
-                <span class="sr-only">Twitter, otwiera się w nowej karcie.</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+      <div class="footer__wrapper wrapper wrapper--large">
+        <div>&copy; 2023 Usigna</div>
+        <div><a href="#" class="map">Mapa strony</a></div>
       </div>
+      <img src="img/shape.png" alt="" class="footer-decoration">
     </footer>
 
-    <script src="https://kit.fontawesome.com/8ac493fb9a.js" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
