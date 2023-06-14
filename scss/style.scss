@@ -301,6 +301,16 @@ body {
   }
 }
 
+.image-wrapper {
+  img {
+    width: 250px;
+
+    @media screen and (min-width: $laptopWidth) {
+      width: 311px;
+    }
+  }
+}
+
 .text-wrapper {
   &--dark {
     color: $blackColor95;
@@ -706,43 +716,6 @@ body {
 
   .btn {
     margin-top: 24px;
-  }
-}
-
-/* boxes */
-.boxes {
-  margin-top: 48px;
-}
-
-.box {
-  @include flex(column, flex-start, center);
-  gap: 24px;
-  margin-bottom: 24px;
-  
-  @media screen and (min-width: $laptopWidth) {
-    @include flex(row, center, flex-start);
-    gap: 48px;
-  }
-}
-
-.box__image {
-  height: 96px;
-  width: 200px;
-  @include flex(row, center, center);
-  margin: 0 auto;
-
-  img {
-    height: 100%;
-  }
-}
-
-.box__text {
-  .title {
-    margin-bottom: 0;
-  }
-
-  .text {
-    color: $blackColor95;
   }
 }
 
