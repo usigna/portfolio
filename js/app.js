@@ -1,3 +1,8 @@
+// for production only
+// window.onerror = function(message, url, lineNumber) {  
+//   return true;
+// };
+
 function showHamburgerMenu() {
   const hamburger = document.querySelector('.hamburger');
   const nav = document.querySelector('.navigation');
