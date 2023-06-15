@@ -124,9 +124,12 @@ body {
 .title {
   margin: 0 0 24px;
 
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
   &--big {
     font-size: 4.4rem;
-    text-transform: uppercase;
 
     @media screen and (min-width: $laptopWidth) {
       font-size: 5.5rem;
@@ -346,6 +349,12 @@ body {
   @media screen and (min-width: $laptopWidth) {
     padding: 128px 0;
     text-align: left;
+  }
+
+  &--padding-middle {
+    @media screen and (min-width: $tabletWidth) {
+      padding: 96px 0;
+    }
   }
 
   &--padding-small {
@@ -688,6 +697,18 @@ body {
     flex-wrap: wrap;
     gap: 48px;
   }
+
+  &--subpage {
+    @media screen and (min-width: $tabletWidth) {
+      gap: 12px;
+    }
+  }
+
+  &--subpage {
+    @media screen and (min-width: $laptopWidth) {
+      gap: 24px;
+    }
+  }
 }
 
 .project {
@@ -695,9 +716,23 @@ body {
   background-color: $blackColor95;
   border-radius: 5px;
   text-align: center;
+  position: relative;
+  z-index: 1;
 
   @media screen and (min-width: $tabletWidth) {
     width: calc(50% - 24px);
+  }
+
+  &--subpage {
+    padding: 8px;
+
+    @media screen and (min-width: $tabletWidth) {
+      width: calc(50% - 6px);
+    }
+
+    @media screen and (min-width: $laptopWidth) {
+      width: calc(50% - 12px);
+    }
   }
 }
 
@@ -741,6 +776,8 @@ body {
   background-color: $blackColor95;
   border-radius: 5px;
   text-align: center;
+  position: relative;
+  z-index: 1;
 
   @media screen and (min-width: $tabletWidth) {
     width: calc(50% - 12px);
@@ -759,6 +796,63 @@ body {
 }
 
 .item__text {
+  padding: 24px;
+
+  .title {
+    margin-bottom: 12px;
+  }
+
+  .date {
+    margin-bottom: 12px;
+  }
+
+  .btn {
+    margin-top: 12px;
+  }
+}
+
+/* boxes */
+.boxes {
+  @include flex(column, flex-start, center);
+  gap: 12px;
+  margin-top: 48px;
+
+  @media screen and (min-width: $tabletWidth) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: $laptopWidth) {
+    justify-content: space-between;
+  }
+}
+
+.box {
+  width: 100%;
+  padding: 8px;
+  background-color: $blackColor95;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+  @media screen and (min-width: $tabletWidth) {
+    width: calc(50% - 6px);
+  }
+
+  @media screen and (min-width: $laptopWidth) {
+    width: calc(33% - 6px);
+  }
+}
+
+.box__image {
+  height: 250px;
+  background: url("../img/pigeons.png") no-repeat center/cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.box__text {
   padding: 24px;
 
   .title {
@@ -816,6 +910,14 @@ body {
       background-image: none;
     }
   }
+
+  &--dark {
+    color: $darkBlueColor;
+  
+    &::before {
+      background-color: $darkBlueColor;
+    }
+  }
 }
 
 /* link for website map */
@@ -854,6 +956,16 @@ body {
     &::before {
       background-color: $whiteColor;
       background-image: none;
+    }
+  }
+
+  &--white {
+    @media screen and (min-width: $laptopWidth) {
+      color: $whiteColor;
+  
+      &::before {
+        @include gradient();
+      }
     }
   }
 }
