@@ -277,11 +277,19 @@ body {
 }
 
 .btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   text-decoration: none;
   border-radius: 5px;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
   font-weight: 700;
   margin-top: 24px;
@@ -308,6 +316,8 @@ body {
       left: 0;
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
+      -webkit-transition: 0.2s;
+      -o-transition: 0.2s;
       transition: 0.2s;
     }
 
@@ -333,6 +343,8 @@ body {
       left: 0;
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
+      -webkit-transition: 0.2s;
+      -o-transition: 0.2s;
       transition: 0.2s;
     }
 
@@ -356,10 +368,10 @@ body {
     &:hover,
     &:focus {
       border-color: transparent;
-      background: -webkit-gradient(linear, left top, left bottom, from($blackColor95), to($blackColor95)) padding-box,
-      -webkit-gradient(linear, left top, right top, from($blueColor), to($greenColor)) border-box;
       background: -o-linear-gradient($blackColor95, $blackColor95) padding-box,
       -o-linear-gradient(left, $blueColor, $greenColor) border-box;
+      background: -webkit-gradient(linear, left top, left bottom, from($blackColor95), to($blackColor95)) padding-box,
+      -webkit-gradient(linear, left top, right top, from($blueColor), to($greenColor)) border-box;
       background: linear-gradient($blackColor95, $blackColor95) padding-box,
       linear-gradient(to right, $blueColor, $greenColor) border-box;
     }
@@ -372,10 +384,10 @@ body {
     &:hover,
     &:focus {
       border-color: transparent;
-      background: -webkit-gradient(linear, left top, left bottom, from($whiteColor), to($whiteColor)) padding-box,
-      -webkit-gradient(linear, left top, right top, from($blueColor), to($greenColor)) border-box;
       background: -o-linear-gradient($whiteColor, $whiteColor) padding-box,
       -o-linear-gradient(left, $blueColor, $greenColor) border-box;
+      background: -webkit-gradient(linear, left top, left bottom, from($whiteColor), to($whiteColor)) padding-box,
+      -webkit-gradient(linear, left top, right top, from($blueColor), to($greenColor)) border-box;
       background: linear-gradient($whiteColor, $whiteColor) padding-box,
       linear-gradient(to right, $blueColor, $greenColor) border-box;
     }
@@ -384,10 +396,10 @@ body {
 
 .image-wrapper {
   img {
-    width: 250px;
+    width: 200px;
 
     @media screen and (min-width: $laptopWidth) {
-      width: 311px;
+      width: 300px;
     }
   }
 }
@@ -406,7 +418,9 @@ body {
   @include flex(row, center, space-between);
 
   @media screen and (min-width: $laptopWidth) {
-    align-items: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 }
 
@@ -650,12 +664,18 @@ body {
       bottom: 3.5px;
       left: -2.5%;
       z-index: -1;
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
       transform: scale(0);
+      -webkit-transition: 0.2s;
+      -o-transition: 0.2s;
       transition: 0.2s;
     }
   
     &:hover::before,
     &:focus::before {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
       transform: scale(1);
     }
 
@@ -711,10 +731,10 @@ body {
   &:hover,
   &:focus {
     border-color: transparent;
-    background: -webkit-gradient(linear, left top, left bottom, from($blackColor95), to($blackColor95)) padding-box,
-    -webkit-gradient(linear, left top, right top, from($blueColor), to($greenColor)) border-box;
     background: -o-linear-gradient($blackColor95, $blackColor95) padding-box,
     -o-linear-gradient(left, $blueColor, $greenColor) border-box;
+    background: -webkit-gradient(linear, left top, left bottom, from($blackColor95), to($blackColor95)) padding-box,
+    -webkit-gradient(linear, left top, right top, from($blueColor), to($greenColor)) border-box;
     background: linear-gradient($blackColor95, $blackColor95) padding-box,
     linear-gradient(to right, $blueColor, $greenColor) border-box;
   }
@@ -753,10 +773,10 @@ body {
   &:hover,
   &:focus {
     border-color: transparent;
-    background: -webkit-gradient(linear, left top, left bottom, from($whiteColor), to($whiteColor)) padding-box,
-    -webkit-gradient(linear, left top, right top, from($blueColor), to($greenColor)) border-box;
     background: -o-linear-gradient($whiteColor, $whiteColor) padding-box,
     -o-linear-gradient(left, $blueColor, $greenColor) border-box;
+    background: -webkit-gradient(linear, left top, left bottom, from($whiteColor), to($whiteColor)) padding-box,
+    -webkit-gradient(linear, left top, right top, from($blueColor), to($greenColor)) border-box;
     background: linear-gradient($whiteColor, $whiteColor) padding-box,
     linear-gradient(to right, $blueColor, $greenColor) border-box;
   }
@@ -770,6 +790,7 @@ body {
 
   @media screen and (min-width: $tabletWidth) {
     @include flex(row, flex-start, space-between);
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 48px;
   }
@@ -838,12 +859,19 @@ body {
   margin-top: 48px;
 
   @media screen and (min-width: $tabletWidth) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 
   @media screen and (min-width: $laptopWidth) {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
   }
 }
@@ -895,11 +923,17 @@ body {
   margin-top: 48px;
 
   @media screen and (min-width: $tabletWidth) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 
   @media screen and (min-width: $laptopWidth) {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 }
@@ -968,12 +1002,18 @@ body {
     bottom: 2.5px;
     left: 0;
     z-index: -2;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
     transform: scale(0);
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
     transition: 0.2s;
   }
 
   &:hover::before,
   &:focus::before {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
     transform: scale(1);
   }
 
@@ -1015,12 +1055,18 @@ body {
     bottom: 2.5px;
     left: -2.5%;
     z-index: -2;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
     transform: scale(0);
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
     transition: 0.2s;
   }
 
   &:hover::before,
   &:focus::before {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
     transform: scale(1);
   }
 
@@ -1068,7 +1114,6 @@ body {
   }
 }
 
-/* subpages */
 /* map */
 .map {
   margin-top: 48px;
@@ -1101,7 +1146,6 @@ body {
 
   img {
     width: 100%;
-    // border: 4px solid black;
     border-radius: 5px;
   }
 }
@@ -1119,7 +1163,7 @@ body {
 }
 
 .ol-list {
-  font-weight: 400;
+  padding: 0 0 0 2rem;
 }
 
 /* Blog images */

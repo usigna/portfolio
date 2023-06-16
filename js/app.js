@@ -1,7 +1,7 @@
 // for production only
-// window.onerror = function(message, url, lineNumber) {  
-//   return true;
-// };
+window.onerror = function(message, url, lineNumber) {  
+  return true;
+};
 
 function showHamburgerMenu() {
   const hamburger = document.querySelector('.hamburger');
