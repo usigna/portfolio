@@ -195,6 +195,7 @@ body {
 
   &--404 {
     @include flex(row, center, center);
+    font-weight: 700;
   }
 }
 
@@ -1105,11 +1106,10 @@ body {
   display: none;
 
   @media screen and (min-width: $laptopWidth) {
-    width: 20%;
+    width: 30%;
     display: block;
 
-    &--big {
-      width: 30%;
+    &--position {
       z-index: -1;
     }
   }
