@@ -90,9 +90,13 @@ body {
   width: 100%;
   margin: 0 auto;
   color: $whiteColor;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
+
+  @media screen and (min-width: $tabletWidth) {
+    font-size: 1.8rem;
+  }
 
   &--large {
     width: calc(100% - 40px);
@@ -137,6 +141,19 @@ body {
 
     @media screen and (min-width: $laptopWidth) {
       text-align: center;
+    }
+  }
+
+  &--biggest {
+    font-size: 12.5rem;
+    line-height: 0;
+    text-align: center;
+    margin: 128px 0 64px;
+
+    @media screen and (min-width: $tabletWidth) {
+      font-size: 24rem;
+      line-height: 0.65;
+      margin: 24px 0 64px;
     }
   }
 
@@ -202,6 +219,14 @@ body {
 
   @media screen and (min-width: $laptopWidth) {
     margin-top: 48px;
+  }
+
+  &--margin-biggest {
+    margin: 0 0 100px;
+
+    @media screen and (min-width: $tabletWidth) {
+      margin: 0 0 24px;
+    }
   }
 
   &--small {
