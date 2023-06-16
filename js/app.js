@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 // for production only
 window.onerror = function(message, url, lineNumber) {  
   return true;
@@ -46,9 +48,35 @@ function blobAnimate() {
   })
 };
 
+function scrollEffect() {
+  const animateItems = document.querySelectorAll('.animate');
+
+  for (let i = 0; i < animateItems.length; i++) {
+    gsap.fromTo(animateItems[i], {scale: '0', opacity: 0}, {scale: '1', opacity: 1, stagger: 0.2, duration: 1, ease: 'easeInOut', scrollTrigger: {
+      trigger: animateItems[i],
+      start: 'top 90%'
+    }})
+  }
+}
+
+function showAnimations() {
+  const mobile = window.matchMedia("screen and (min-width: 1200px)");
+
+  if (mobile.matches) {
+      scrollEffect();
+  }
+
+  mobile.addListener( function(mobile) {
+      if (mobile.matches) {
+          scrollEffect();
+      }
+  });
+};
+
 const init = function () {
   showHamburgerMenu();
   blobAnimate();
+  showAnimations();
 };
 
 document.addEventListener('DOMContentLoaded', init);
