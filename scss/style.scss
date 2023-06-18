@@ -1025,7 +1025,6 @@ body {
   }
 
   @media screen and (min-width: $laptopWidth) {
-
     &::before {
       background-color: $whiteColor;
       background-image: none;
@@ -1165,6 +1164,60 @@ body {
 
 .ol-list {
   padding: 0 0 0 2rem;
+}
+
+/* cookies */
+.cookies {
+  width: 100%;
+  padding: 12px 0;
+  background-color: $blackColor95;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  display: none;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $whiteColor;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.active {
+  display: block;
+}
+
+.cookies__wrapper {
+  @include flex(row, center, center);
+  gap: 24px;
+
+  @media screen and (min-width: $tabletWidth) {
+    @include flex(row, center, center);
+  }
+}
+
+.cookies__img {
+  height: 48px;
+}
+
+.cookies__text-wrapper {
+  font-size: 1.4rem;
+  @media screen and (min-width: $tabletWidth) {
+    @include flex(row, center, center);
+    gap: 24px;
+    font-size: 1.6rem;
+  }
+}
+
+.cookies__btn {
+  border: none;
+  padding: 8px 48px;
+  margin: 0;
 }
 
 /* Blog images */

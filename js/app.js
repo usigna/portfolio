@@ -24,7 +24,7 @@ function showHamburgerMenu() {
   }
 
   hamburger.addEventListener('click', handleClick);
-}
+};
 
 function blobAnimate() {
   const blobBtn = document.querySelector('.blob-btn');
@@ -57,18 +57,18 @@ function scrollEffect() {
       start: 'top 90%'
     }})
   }
-}
+};
 
 function showAnimations() {
-  const mobile = window.matchMedia("screen and (min-width: 1200px)");
+  const mobile = window.matchMedia('screen and (min-width: 1200px)');
 
   if (mobile.matches) {
-      scrollEffect();
+    scrollEffect();
   }
 
   mobile.addListener( function(mobile) {
       if (mobile.matches) {
-          scrollEffect();
+        scrollEffect();
       }
   });
 };
