@@ -4,63 +4,82 @@
   <head>
     <meta charset="UTF-8">
     <meta name="format-detection" content="telephone=no" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio - Usigna.">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" type="image/png" href="../favicon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio - Usigna." />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
     <title>Usigna | Blog | O kursie i certyfikacie Trusted Tester</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="../css/style.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" /> 
+    <link rel="stylesheet" href="../css/style.min.css" />
   </head>
 
   <body>
-    <a href="#main" class="skip-link">Przejdź do treści</a>
-    
+    <a href="#main" class="accessibility-options__skip-link">Przejdź do treści</a>
+
     <header class="header">
       <div class="header__wrapper wrapper wrapper--large">
-        <a href="../" class="logo">Usigna<span class="sr-only"> - strona główna</span></a>
-        <div class="menu">
+        <div class="header__item">
+          <a href="../" class="logo">Usigna<span class="sr-only"> - strona główna</span></a>
+        </div>
+        <div class="header__item">
           <button class="hamburger" aria-expanded="false">
             <span class="sr-only">Otwórz/zamknij menu</span>
             <span class="hamburger__box">
               <span class="hamburger__inner"></span>
             </span>
           </button>
-          <nav class="nav">
-            <ul class="navigation">
-              <li class="navigation__item">
-                <a href="../" class="navigation__link">Strona główna</a>
+          <div class="navigation">
+            <nav class="nav">
+              <ul class="menu">
+                <li class="menu__item">
+                  <a href="../#offer" class="menu__link">Oferta</a>
+                </li>
+                <li class="menu__item">
+                  <a href="../#projects" class="menu__link">Projekty</a>
+                </li>
+                <li class="menu__item">
+                  <a href="../#blog" class="menu__link">Blog</a>
+                </li>
+                <li class="menu__item">
+                  <a href="../#contact" class="menu__link">Kontakt</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="social-media">
+              <li>
+                <a href="https://github.com/usigna" class="social-media__link" target="_blank">
+                  <img src="../img/github-icon.svg" alt="GitHub" height="24" />
+                  <span class="sr-only"> otwiera się w nowej karcie.</span>
+                </a>
               </li>
-              <li class="navigation__item">
-                <a href="../about-me.html" class="navigation__link">O mnie</a>
+              <li>
+                <a href="https://twitter.com/usigna__" class="social-media__link" target="_blank">
+                  <img src="../img/twitter-icon.svg" alt="Twitter" height="24" />
+                  <span class="sr-only"> otwiera się w nowej karcie.</span>
+                </a>
               </li>
-              <li class="navigation__item">
-                <a href="../projects/" class="navigation__link">Projekty</a>
+              <li>
+                <a href="https://www.instagram.com/uwaga.kodowanko/" class="social-media__link" target="_blank">
+                  <img src="../img/instagram-icon.svg" alt="Instagram" height="24" />
+                  <span class="sr-only"> otwiera się w nowej karcie.</span>
+                </a>
               </li>
-              <li class="navigation__item">
-                <a href="../web-accessibility.html" class="navigation__link">Dostępność cyfrowa</a>
-              </li>
-              <li class="navigation__item">
-                <a href="./" class="navigation__link">Blog</a>
-              </li>
-              <li class="navigation__item">
-                <a href="../contact.html" class="navigation__link">Kontakt</a>
-              </li>
-              <img src="../img/shape.png" alt="" class="menu-decoration" />
             </ul>
-          </nav>
+          </div>
         </div>
       </div>
     </header>
 
     <main class="main" id="main">
-      <section class="section section--left section--white section--padding-small">
-        <div class="section__wrapper wrapper wrapper--small wrapper--dark">
-          <div class="main-image">
-            <img src="../img/blog/ttimage.png" alt="Rysunek przedstawiający uśmiechniętego mężczyznę, który ma nogę w gipsie." />
+      <section class="section section--padding-biggest section--white">
+        <div class="section__wrapper section__wrapper--dark wrapper wrapper--small">
+          <div class="post-header">
+            <div class="main-image">
+              <img src="../img/blog/ttimage.png" alt="Rysunek przedstawiający uśmiechniętego mężczyznę, który ma nogę w gipsie." />
+            </div>
+            <h1 class="title title--big">O kursie i certyfikacie Trusted Tester</h1>
+            <div class="date date--post"><span class="sr-only">Post z dnia: </span>30.05.2023 | <span class="sr-only">Kategoria: </span>Web Accessibility</div>
           </div>
-          <h1 class="title title--big title--dark title--center">O kursie i certyfikacie Trusted Tester</h1>
-          <div class="date date--post"><span class="sr-only">Post z dnia: </span>30.05.2023 | <span class="sr-only">Kategoria: </span>Web Accessibility</div>
           <div class="text-wrapper text-wrapper--font-400w">
             <h2 class="title title--middle">O kursie Trusted Tester</h2>
             <p class="text">Trusted Tester to darmowy kurs online organizowany przez <span lang="en">U.S. Department of Homeland Security</span>, który uczy podstaw dostępności cyfrowej na podstawie obowiązującego w USA Section 508. Przed przystąpieniem warto już znać podstawy HTML, CSS i JavaScript oraz język angielski.</p>
@@ -92,8 +111,10 @@
             <h3 class="title title--small">Podsumowanie</h3>
             <p class="text">Dla mnie kurs Trusted Tester to była świetna zabawa i dobra powtórka już znanych mi informacji. Nie wiem, ile czasu może on zająć komuś, kto dopiero rozpoczyna swoją przygodę z dostępnością cyfrową, ale myślę, że jest dobrą opcją na start. Dzięki temu nie straci się czasu na weryfikację informacji i uniknie błędów związanych z korzystaniem z niewłaściwych źródeł, których w Internecie jest bardzo dużo.</p>
           </div>
-          <div class="button-wrapper button-wrapper--margin-big">
-            <a href="./" class="btn btn--border btn--border-dark"><img src="../img/arrow-left.svg" alt="" /> Wróć do wszystkich postów</a>
+
+
+          <div class="button-wrapper">
+            <a href="../" class="btn btn--border btn--border-dark"><img src="../img/arrow-left.svg" alt="" />Wróć na stronę główną</a>
           </div>
         </div>
       </section>
@@ -101,13 +122,32 @@
 
     <footer class="footer">
       <div class="footer__wrapper wrapper wrapper--large">
-        <div>&copy; 2023 Usigna</div>
-        <div><a href="../map.html" class="link-map link-map--white">Mapa strony</a></div>
+        <div>
+          &copy; 2023 Usigna
+        </div>
+        <ul class="social-media">
+          <li>
+            <a href="https://github.com/usigna" class="social-media__link" target="_blank">
+              <img src="../img/github-icon.svg" alt="GitHub" height="24" />
+              <span class="sr-only"> otwiera się w nowej karcie.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/usigna__" class="social-media__link" target="_blank">
+              <img src="../img/twitter-icon.svg" alt="Twitter" height="24" />
+              <span class="sr-only"> otwiera się w nowej karcie.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/uwaga.kodowanko/" class="social-media__link" target="_blank">
+              <img src="../img/instagram-icon.svg" alt="Instagram" height="24" />
+              <span class="sr-only"> otwiera się w nowej karcie.</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <script src="../js/app.js"></script>
+    <script src="../js/hamburger.js"></script>
   </body>
 </html>

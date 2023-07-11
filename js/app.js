@@ -1,82 +1,48 @@
-gsap.registerPlugin(ScrollTrigger);
-
-// for production only
-window.onerror = function(message, url, lineNumber) {  
-  return true;
-};
-
-function showHamburgerMenu() {
-  const hamburger = document.querySelector('.hamburger');
-  const nav = document.querySelector('.navigation');
-  const navigationLinks = document.querySelectorAll('.navigation__link');
-
-  const handleClick = function () {
-    hamburger.classList.toggle('hamburger--active');
-    hamburger.setAttribute('aria-expanded', hamburger.classList.contains('hamburger--active'));
-    nav.classList.toggle('navigation--active');
-  }
-
-  for (let i = 0; i < navigationLinks.length; i++) {
-    navigationLinks[i].addEventListener('click', function () {
-      hamburger.classList.remove('hamburger--active');
-      nav.classList.remove('navigation--active');
-    })
-  }
-
-  hamburger.addEventListener('click', handleClick);
-};
-
-function blobAnimate() {
-  const blobBtn = document.querySelector('.blob-btn');
-  const blobBtnImage = blobBtn.querySelector('img');
+function stopAnimations() {
+  const btn = document.querySelector('.accessibility-options__btn');
+  const typingText = document.querySelector('.typing-text');
   const blobImage = document.querySelector('.blob-img');
+  // const offerImage = document.querySelector('.offer__item--animation img');
+  const duckyImage = document.querySelector('.ducky-contact');
 
-  blobBtn.addEventListener('click', function() {
-    if (blobBtnImage.classList.contains('pause')) {
+  btn.addEventListener('click', function() {
+
+    if (btn.classList.contains('play')) {
+      typingText.classList.remove('typing-text--animate');
       blobImage.src = 'img/blob.svg';
-      blobBtnImage.src = 'img/play-solid.svg';
-      blobBtnImage.alt = 'Wznów animację.';
-      blobBtnImage.classList.add('padding-left');
-      blobBtnImage.classList.remove('pause');
+      // offerImage.style.animation = '0';
+      duckyImage.style.animation = '0';
+      btn.classList.remove('play');
     } else {
+      typingText.classList.add('typing-text--animate');
       blobImage.src = 'img/blob-animate.svg';
-      blobBtnImage.src = 'img/pause-solid.svg';
-      blobBtnImage.alt = 'Zatrzymaj animację.';
-      blobBtnImage.classList.remove('padding-left');
-      blobBtnImage.classList.add('pause');
+      // offerImage.style.animation = 'swinging 2s linear infinite';
+      duckyImage.style.animation = 'swinging-small 2.5s linear infinite';
+      btn.classList.add('play');
     }
   })
 };
 
-function scrollEffect() {
-  const animateItems = document.querySelectorAll('.animate');
+function changeSlide() {
+  const slidesContainer = document.querySelector(".posts");
+  const slide = document.querySelector(".posts__item");
+  const prevButton = document.querySelector(".slider__btn--left");
+  const nextButton = document.querySelector(".slider__btn--right");
 
-  for (let i = 0; i < animateItems.length; i++) {
-    gsap.fromTo(animateItems[i], {scale: '0', opacity: 0}, {scale: '1', opacity: 1, stagger: 0.2, duration: 1, ease: 'easeInOut', scrollTrigger: {
-      trigger: animateItems[i],
-      start: 'top 90%'
-    }})
-  }
-};
-
-function showAnimations() {
-  const mobile = window.matchMedia('screen and (min-width: 1200px)');
-
-  if (mobile.matches) {
-    scrollEffect();
-  }
-
-  mobile.addListener( function(mobile) {
-      if (mobile.matches) {
-        scrollEffect();
-      }
+  nextButton.addEventListener("click", function() {
+    const slideWidth = slide.clientWidth;
+    slidesContainer.scrollLeft += slideWidth;
   });
-};
+
+  prevButton.addEventListener("click", function() {
+    const slideWidth = slide.clientWidth;
+    slidesContainer.scrollLeft -= slideWidth;
+  });
+}
 
 const init = function () {
-  showHamburgerMenu();
-  blobAnimate();
-  showAnimations();
+  stopAnimations();
+  changeSlide();
 };
 
 document.addEventListener('DOMContentLoaded', init);
