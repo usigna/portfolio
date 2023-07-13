@@ -586,7 +586,6 @@ body {
       @include flex(row, flex-start, flex-start);
       gap: 96px;
       text-align: left;
-      font-size: 2.4rem;
     }
   }
 
@@ -1167,7 +1166,6 @@ body {
   display: inline-block;
   color: $blackColor95;
   text-decoration: none;
-  font-size: 1.8rem;
   font-weight: 700;
   position: relative;
   z-index: 0;
@@ -1214,10 +1212,6 @@ body {
   &:hover,
   &:focus {
     color: $blackColor100;
-  }
-
-  @media screen and (min-width: $tabletWidth) {
-    font-size: 2.4rem;
   }
 }
 
