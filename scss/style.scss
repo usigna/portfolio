@@ -404,7 +404,6 @@ body {
 .social-media__link {
   width: 48px;
   height: 48px;
-  border: 3px solid $whiteColor;
   border-radius: 50%;
   @include flex(row, center, center);
   position: relative;
@@ -1496,7 +1495,7 @@ body {
 /* projects images */
 .projects__item--1 {
   &::before {
-    background: url("../img/projects/pigeons.png") no-repeat center/cover;
+    background: url("../img/projects/eengine.png") no-repeat center/cover;
   }
 }
 
