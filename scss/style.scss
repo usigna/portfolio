@@ -1499,6 +1499,12 @@ body {
   }
 }
 
+.projects__item--2 {
+  &::before {
+    background: url("../img/projects/music-jam.png") no-repeat center/cover;
+  }
+}
+
 /* posts images */
 .post-img--1 {
   background: url("../img/blog/ttimage.png") no-repeat center/cover;
