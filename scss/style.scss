@@ -396,9 +396,9 @@ body {
   gap: 8px;
   line-height: 0;
 
-  @media screen and (min-width: $tabletWidth) {
-    gap: 16px;
-  }
+  // @media screen and (min-width: $tabletWidth) {
+  //   gap: 16px;
+  // }
 }
 
 .social-media__link {
@@ -1502,6 +1502,12 @@ body {
 .projects__item--2 {
   &::before {
     background: url("../img/projects/music-jam.png") no-repeat center/cover;
+  }
+}
+
+.projects__item--3 {
+  &::before {
+    background: url("../img/projects/mymusic.png") no-repeat center/cover;
   }
 }
 
