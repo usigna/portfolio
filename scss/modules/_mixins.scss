@@ -1,21 +1,11 @@
 @mixin flex($direction, $alignItems, $justifyContent) {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: $direction;
   flex-direction: $direction;
-  -webkit-box-align: $alignItems;
-  -ms-flex-align: $alignItems;
   align-items: $alignItems;
-  -webkit-box-pack: $justifyContent;
-  -ms-flex-pack: $justifyContent;
   justify-content: $justifyContent;
 }
 
 @mixin gradient() {
   background: #3CB9FC;
-  background: -o-linear-gradient(320.54deg, #3CB9FC 13.59%, #02D796 95.18%);
   background: linear-gradient(129.46deg, #3CB9FC 13.59%, #02D796 95.18%);
 }
